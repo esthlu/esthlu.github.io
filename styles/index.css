@@ -37,6 +37,12 @@ p {
 
 a { text-decoration: none; }
 
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-size-h1: 4rem;
+  }
+}
+
 /*************************
  ***** NAVBAR/BANNER *****
  *************************/
@@ -118,7 +124,7 @@ a.page-link:hover, a.page-link:active, a.page-link:focus, a.home-link:hover, a.h
   justify-content: center;
   padding: 3rem 5rem;
   color: var(--dark-green);
-  text-align: center;
+  text-align: left;
 }
 
 .section h2, .section a {
@@ -138,6 +144,9 @@ a.page-link:hover, a.page-link:active, a.page-link:focus, a.home-link:hover, a.h
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  .section { padding: 2rem; }
+}
 
 /*************************
  ********* ABOUT *********
@@ -157,6 +166,10 @@ a.page-link:hover, a.page-link:active, a.page-link:focus, a.home-link:hover, a.h
   border-radius: 50%;
   border: 10px solid white;
   z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-image img { max-height: 13rem; }
 }
 
 /*************************
@@ -193,6 +206,7 @@ details[open] summary ~ * {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
+  text-align: center;
 }
 
 .experience-content {
@@ -295,12 +309,18 @@ details[open] summary ~ * {
   opacity: 1;
 }
 
+@media only screen and (max-width: 600px) {
+  .experience-content { flex-direction: column; }
+  .experience-right { margin-bottom: 1rem; }
+  .experience-right img.work-image { height: 5rem; }
+  .experience-right img.project-image { width: 60%; }
+}
+
 /*************************
  ********** ETC **********
  *************************/
 .etc {
   min-height: 350px;
-  text-align: center;
   background: url("../assets/img/greenies-bow.jpg") no-repeat fixed center top / cover;
   position: relative;
   z-index: 4;
@@ -317,7 +337,7 @@ details[open] summary ~ * {
   width: 100%;
   height: 100%;
   top: 0;
-  z-index: 6;
+  z-index: -1;
 }
 
 .etc-content {
@@ -362,5 +382,13 @@ details[open] summary ~ * {
   transform: scale(0.7);
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
 
+@media only screen and (max-width: 600px) {
+  .contact-button img, .contact-button:visited img {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
 }
