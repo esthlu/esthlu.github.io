@@ -37,6 +37,12 @@ p {
 
 a { text-decoration: none; }
 
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-size-h1: 4rem;
+  }
+}
+
 /*************************
  ***** NAVBAR/BANNER *****
  *************************/
@@ -46,6 +52,8 @@ a { text-decoration: none; }
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
   transition: top 0.3s;
   background-color: var(--dark-green);
   opacity: 1;
@@ -61,7 +69,6 @@ a { text-decoration: none; }
   align-items: center;
   flex: 1 1 auto;
   justify-content: flex-start;
-  padding-left: 1rem;
 }
 
 a.home-link {
@@ -75,10 +82,16 @@ a.home-link {
 }
 
 .navbar-right {
+  position: relative;
   display: flex;
   flex: 1 1 auto;
   justify-content: flex-end;
-  padding-right: 1rem;
+}
+
+.menu-hamburger { display: none; }
+
+#menu-links {
+  display: flex;
 }
 
 a.page-link {
@@ -108,6 +121,41 @@ a.page-link:hover, a.page-link:active, a.page-link:focus, a.home-link:hover, a.h
   position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+  #navbar { padding: 0 0.5rem; }
+
+  .menu-hamburger {
+    display: block;
+    color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-hamburger .material-icons { font-size: 2rem; }
+
+  #menu-links {
+    position: absolute;
+    top: calc(var(--navbar-height) + 0.1rem);
+    right: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem;
+    background: var(--dark-green);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  }
+
+  #menu-links.hide { display: none; }
+
+  a.page-link {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .banner { height: 40vh; }
+}
+
 /*************************
  ******** SECTION ********
  *************************/
@@ -118,7 +166,7 @@ a.page-link:hover, a.page-link:active, a.page-link:focus, a.home-link:hover, a.h
   justify-content: center;
   padding: 3rem 5rem;
   color: var(--dark-green);
-  text-align: center;
+  text-align: left;
 }
 
 .section h2, .section a {
@@ -138,6 +186,9 @@ a.page-link:hover, a.page-link:active, a.page-link:focus, a.home-link:hover, a.h
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  .section { padding: 2rem; }
+}
 
 /*************************
  ********* ABOUT *********
@@ -157,6 +208,10 @@ a.page-link:hover, a.page-link:active, a.page-link:focus, a.home-link:hover, a.h
   border-radius: 50%;
   border: 10px solid white;
   z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-image img { max-height: 13rem; }
 }
 
 /*************************
@@ -193,6 +248,7 @@ details[open] summary ~ * {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
+  text-align: center;
 }
 
 .experience-content {
@@ -295,12 +351,18 @@ details[open] summary ~ * {
   opacity: 1;
 }
 
+@media only screen and (max-width: 600px) {
+  .experience-content { flex-direction: column; }
+  .experience-right { margin-bottom: 1rem; }
+  .experience-right img.work-image { height: 5rem; }
+  .experience-right img.project-image { width: 60%; }
+}
+
 /*************************
  ********** ETC **********
  *************************/
 .etc {
   min-height: 350px;
-  text-align: center;
   background: url("../assets/img/greenies-bow.jpg") no-repeat fixed center top / cover;
   position: relative;
   z-index: 4;
@@ -317,7 +379,7 @@ details[open] summary ~ * {
   width: 100%;
   height: 100%;
   top: 0;
-  z-index: 6;
+  z-index: -1;
 }
 
 .etc-content {
@@ -362,5 +424,13 @@ details[open] summary ~ * {
   transform: scale(0.7);
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
 
+@media only screen and (max-width: 600px) {
+  .contact-button img, .contact-button:visited img {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
 }
