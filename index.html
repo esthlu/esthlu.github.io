@@ -6,6 +6,7 @@
     <title>Esther Lu</title>
 
     <link href="https://fonts.googleapis.com/css?family=Alice|Zilla+Slab:400,700|Mr+De+Haviland" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
   </head>
 
@@ -15,10 +16,15 @@
         <a href="#" class="home-link">EL</a>
       </div>
       <div class="navbar-right">
-        <a href="#about" class="page-link">about</a>
-        <a href="#experience" class="page-link">experiences</a>
-        <a href="#etc" class="page-link">(.etc)</a>
-        <a href="#contact" class="page-link">contact</a>
+        <button onclick="toggleMenu()" class="menu-hamburger">
+          <i class="material-icons">menu</i>
+        </button>
+        <div id="menu-links" class="hide">
+          <a href="#about" class="page-link">about</a>
+          <a href="#experience" class="page-link">experiences</a>
+          <a href="#etc" class="page-link">(.etc)</a>
+          <a href="#contact" class="page-link">contact</a>
+        </div>
       </div>
     </div>
 
