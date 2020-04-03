@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import layout from '../styles/layout.css';
+import '../styles/layout.css';
 
 function Portfolio() {
   return (
