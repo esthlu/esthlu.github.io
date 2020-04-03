@@ -5,6 +5,7 @@ import Home from './views/Home';
 import About from './views/About';
 import Portfolio from './views/Portfolio';
 import Experience from './views/Experience';
+import './styles/layout.css';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Experience />
         </Route>
 
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>

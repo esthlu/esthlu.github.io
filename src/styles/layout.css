@@ -16,40 +16,12 @@ nav {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 1rem 0 4rem;
+  margin: 1rem 0 3rem;
 }
 
 img.logo-home {
-  width: 3rem;
+  width: 4rem;
   height: auto;
-}
-
-#home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #CCCCCC;
-}
-
-#home .links {
-  display: flex;
-}
-
-#home a {
-  display: block;
-  font-family: 'Alice', serif;
-  font-size: 1.25rem;
-  text-align: center;
-  background-color: #99CCCC;
-  padding: 1rem 0;
-  margin: 1rem 2rem;
-  width: 10rem;
-  border-radius: 10px;
-  color: black;
-  text-decoration: none;
 }
 
 #about, #portfolio, #experience {
