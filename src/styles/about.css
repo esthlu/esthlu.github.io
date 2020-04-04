@@ -17,6 +17,7 @@
 
 .about-text p {
   line-height: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .bg {
@@ -62,4 +63,16 @@
 
 @media only screen and (max-width: 768px) {
   .about-text { width: 100%; }
+  .about-text p { font-size: 1rem; }
+
+  .cream-triangle {
+    border-bottom: 37vh solid #F7DFC1;
+    border-right: 100vw solid transparent;
+    bottom: 67vh;
+    width: 105vw;
+  }
+
+  .cream-rect {
+    border-bottom: 68vh solid #F7DFC1;
+  }
 }
