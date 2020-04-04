@@ -48,6 +48,7 @@
   object-fit: cover;
   border: 8px solid #99CCCC;
   border-radius: 50%;
+  margin-bottom: 2rem;
 }
 
 .links {
@@ -78,4 +79,21 @@
 @keyframes slideInFromTop {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(0); }
+}
+
+@media only screen and (max-width: 768px) {
+  #home {
+    padding: 3rem;
+  }
+  .links {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .links a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    margin: 0.5rem 2rem;
+    border-radius: 4px;
+  }
 }

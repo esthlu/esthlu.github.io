@@ -1,7 +1,65 @@
+#about {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
 .about-text {
-  width: 60%;
+  width: 65%;
 }
 
 .about-text p {
   line-height: 1.5rem;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 0;
+  box-sizing: border-box;
+}
+
+.blue-triangle {
+  border-bottom: 5vh solid #003399;
+  border-left: 100vw solid transparent;
+  bottom: 79vh;
+}
+
+.blue-rect {
+  border-bottom: 80vh solid #003399;
+}
+
+.cream-triangle {
+  border-bottom: 46vh solid #F7DFC1;
+  border-right: 100vw solid transparent;
+  bottom: 59vh;
+  width: 105vw;
+}
+
+.cream-rect {
+  border-bottom: 60vh solid #F7DFC1;
+}
+
+.teal-triangle {
+  border-bottom: 36vh solid #99CCCC;
+  border-left: 100vw solid transparent;
+  bottom: 10vh;
+}
+
+.teal-rect {
+  border-bottom: 10vh solid #99CCCC;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-text { width: 100%; }
 }

@@ -7,7 +7,7 @@ function Home() {
   return (
     <div id="home">
       <div className="top">
-        <img src={profileImage} className="profile-picture" />
+        <img src={profileImage} className="profile-picture" alt="esther headshot" />
 
         <div className="name-container">
           <div className="underline" />

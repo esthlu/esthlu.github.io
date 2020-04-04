@@ -3,6 +3,7 @@ import Logo from '../components/Logo';
 import Footer from '../components/Footer';
 
 function Portfolio() {
+  document.title = "Portfolio | Esther Lu"
   return (
     <div id="about">
       <Logo />

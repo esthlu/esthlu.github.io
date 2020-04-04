@@ -8,8 +8,12 @@ body {
 h1 {
   font-family: 'Alice', serif;
   font-size: 3rem;
+  margin-top: 0;
 }
-p { font-family: 'Raleway', sans-serif; }
+p {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 0 1.5rem;
+}
 
 nav {
   display: flex;
@@ -26,7 +30,7 @@ img.logo-home {
 
 #about, #portfolio, #experience {
   position: relative;
-  padding: 0 5rem 7rem;
+  padding: 0 5rem;
   min-height: 100vh;
   height: fit-content;
   box-sizing: border-box;
@@ -34,9 +38,10 @@ img.logo-home {
 
 #footer {
   display: flex;
-  position: absolute;
-  bottom: 5rem;
-  right: 5rem;
+  justify-content: flex-end;
+  padding: 3rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #footer a {
@@ -47,4 +52,25 @@ img.logo-home {
   font-family: 'Alice', serif;
   font-size: 1rem;
   border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    margin: auto;
+  }
+
+  #about, #portfolio, #experience {
+    padding: 0 2.5rem;
+  }
+
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  #footer a {
+    margin: 0;
+    font-size: 0.85rem;
+  }
 }
