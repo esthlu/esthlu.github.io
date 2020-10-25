@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../components/Logo';
 import Footer from '../components/Footer';
-import '../styles/about.css'
+import '../styles/about.css';
 
 function About() {
   document.title = "About | Esther Lu"

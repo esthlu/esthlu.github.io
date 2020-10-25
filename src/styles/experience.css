@@ -1,0 +1,76 @@
+.exp-item {
+  display: flex;
+}
+
+.exp-item .timeline {
+  position: relative;
+  margin-right: 1rem;
+  min-height: 5rem;
+}
+
+.exp-item .timeline .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99CCCC;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+}
+
+.exp-item .timeline .circle:focus {
+  outline: none;
+  border: 2px solid #003399;
+}
+
+.exp-item .timeline .circle .plus {
+  transition: all 200ms ease;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.exp-item .timeline .circle .plus.rotate {
+  transform: rotate(135deg);
+}
+
+.exp-item .timeline .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.1rem;
+  transform: translate(0, 2.5rem);
+  margin: auto;
+  background-color: #CCCCCC;
+  width: 0.4rem;
+  height: calc(100% - 2rem);
+  z-index: -1;
+}
+
+.exp-item.last .timeline .line { display: none; }
+
+.exp-item .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-item .content .title {
+  font-family: 'Alice', serif;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.exp-item .content .subtitle {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-item .content .details {
+  margin: 0 0 1rem;
+  padding: 0 1.5rem;
+}
+
+.exp-item .content .details li {
+  font-family: 'Raleway', sans-serif;
+}

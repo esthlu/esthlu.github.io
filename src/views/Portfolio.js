@@ -25,6 +25,8 @@ function Portfolio() {
     <div id="about">
       <Logo />
       <h1>portfolio</h1>
+      <p><i>a work in progress</i></p>
+      
       <div className="flex-content">
         <div className="boxes">
           {items.map((item, i) => {
