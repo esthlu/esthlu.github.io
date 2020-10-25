@@ -20,11 +20,11 @@ function Experience() {
       <h1>experience</h1>
       <p><i>a work in progress</i></p>
 
-      {items.map((item, i) => {
+      {/*items.map((item, i) => {
         return (
           <ExperienceItem item={item} key={i} isLast={i === (items.length-1)} />
         )
-      })}
+      })*/}
 
       <Footer />
     </div>
