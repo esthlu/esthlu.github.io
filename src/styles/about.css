@@ -31,35 +31,35 @@
 }
 
 .blue-triangle {
-  border-bottom: 5vh solid #003399;
+  border-bottom: 5vh solid var(--blue);
   border-left: 100vw solid transparent;
   bottom: 79vh;
 }
 
 .blue-rect {
-  border-bottom: 80vh solid #003399;
+  border-bottom: 80vh solid var(--blue);
 }
 
 .cream-triangle {
-  border-bottom: 46vh solid #F7DFC1;
+  border-bottom: 46vh solid var(--cream);
   border-right: 100vw solid transparent;
   bottom: 59vh;
   width: 105vw;
 }
 
 .cream-rect {
-  border-bottom: 60vh solid #F7DFC1;
+  border-bottom: 60vh solid var(--cream);
 }
 
 .teal-triangle {
-  border-bottom: 36vh solid #99CCCC;
+  border-bottom: 36vh solid var(--teal);
   border-left: 100vw solid transparent;
   bottom: 10vh;
 }
 
 .teal-rect {
-  background: #99CCCC;
-  border-bottom: 10vh solid #99CCCC;
+  background: var(--teal);
+  border-bottom: 10vh solid var(--teal);
 }
 
 @media only screen and (max-width: 768px) {
@@ -67,13 +67,13 @@
   .about-text p { font-size: 1rem; }
 
   .cream-triangle {
-    border-bottom: 37vh solid #F7DFC1;
+    border-bottom: 37vh solid var(--cream);
     border-right: 100vw solid transparent;
     bottom: 67vh;
     width: 105vw;
   }
 
   .cream-rect {
-    border-bottom: 68vh solid #F7DFC1;
+    border-bottom: 68vh solid var(--cream);
   }
 }
