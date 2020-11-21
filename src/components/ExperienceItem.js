@@ -7,29 +7,37 @@ function ExperienceItem(props) {
   const [expanded, setExpanded] = useState(false)
   const item = props.item
   const isLast = props.isLast
+  const canExpand = ["job", "project"].includes(item.category)
 
   return (
     <div className={`exp-item ${isLast ? "last" : ""}`}>
       <div className="timeline">
-        <button
-          className="circle"
-          onMouseOver={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          onClick={() => setExpanded(!expanded)}
-        >
-          {hover && item.description && (
-            <img
-              src={plusIcon}
-              className={`plus ${expanded ? "rotate" : ""}`}
-            />
-          )}
-        </button>
+        {canExpand ? (
+          <button
+            className={`circle ${item.category}`}
+            onMouseOver={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            onClick={() => setExpanded(!expanded)}
+          >
+            {hover && (
+              <img
+                src={plusIcon}
+                className={`plus ${expanded ? "rotate" : ""}`}
+              />
+            )}
+          </button>
+        ) : (
+          <div className={`circle ${item.category}`} />
+        )}
+
         <div className="line" />
       </div>
 
       <div className="content">
         <p className="title">{item.title}</p>
-        <p className="subtitle">{item.subtitle}</p>
+        {item.subtitle && (
+          <p className="subtitle">{item.subtitle}</p>
+        )}
 
         {expanded && (
           <ul className="details">
