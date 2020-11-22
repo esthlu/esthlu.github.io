@@ -22,9 +22,12 @@ function Portfolio() {
     {title: "test project8", image: temp, url: "#"},
   ]
   return (
-    <div id="about">
+    <div id="portfolio">
       <Logo />
-      <h1>portfolio</h1>
+      <div className="h1-container">
+        <div className="underline" />
+        <h1>portfolio</h1>
+      </div>
       <p><i>a work in progress</i></p>
 
       {/*<div className="flex-content">

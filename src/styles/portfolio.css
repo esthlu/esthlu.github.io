@@ -1,3 +1,5 @@
+#portfolio .h1-container .underline { background-color: var(--cream); }
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -29,9 +31,9 @@
   height: 0;
 }
 
-.portfolio-box .blue { background-color: #003399; }
-.portfolio-box .cream { background-color: #F7DFC1; }
-.portfolio-box .teal { background-color: #99CCCC; }
+.portfolio-box .blue { background-color: var(--blue); }
+.portfolio-box .cream { background-color: var(--cream); }
+.portfolio-box .teal { background-color: var(--teal); }
 
 .portfolio-box img {
   width: 100%;

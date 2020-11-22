@@ -4,6 +4,8 @@
   flex-direction: column;
 }
 
+#about .h1-container .underline { background-color: var(--teal); }
+
 .flex-content {
   display: flex;
   flex-direction: column;

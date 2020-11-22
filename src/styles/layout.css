@@ -2,10 +2,12 @@
   --blue: #003399;
   --teal: #99CCCC;
   --cream: #F7DFC1;
+  --gray: #CCCCCC;
+  --background: #F0F0F0;
 }
 
 body {
-  background-color: #F0F0F0;
+  background-color: var(--background);
   margin: 0;
   min-width: 100vw;
   min-height: 100vh;
@@ -14,8 +16,32 @@ body {
 h1 {
   font-family: 'Alice', serif;
   font-size: 3rem;
+  letter-spacing: 2px;
   margin-top: 0;
 }
+
+.h1-container {
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.h1-container h1 {
+  position: relative;
+  z-index: 2;
+}
+
+.h1-container .underline {
+  position: absolute;
+  bottom: 3rem;
+  left: -1rem;
+  width: calc(100% + 2rem);
+  height: 0.5rem;
+  z-index: 1;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;

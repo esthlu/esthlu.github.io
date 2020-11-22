@@ -76,7 +76,10 @@ function Experience() {
   return (
     <div id="experience">
       <Logo />
-      <h1>experience</h1>
+      <div className="h1-container">
+        <div className="underline" />
+        <h1>experience</h1>
+      </div>
 
       {items.map((item, i) => {
         return (
