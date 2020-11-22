@@ -8,10 +8,14 @@ function About() {
   return (
     <div id="about">
       <Logo />
-      <h1>about</h1>
+      <div className="h1-container">
+        <div className="underline" />
+        <h1>about</h1>
+      </div>
+
       <div className="flex-content">
         <div className="about-text">
-          <p>I believe technology is a unique conduit for meeting people's needs, and I love exploring the space where people and technology intersect. I'm a software developer at Workit Health, where I have the unique and awesome privilege of serving the recovery community by writing code.</p>
+          <p>I believe technology is a unique conduit for meeting people's needs, and I love exploring the space where people and technology intersect. I'm a software developer at Workit Health, where I have the uniquely wonderful privilege of serving the recovery community by writing code.</p>
           <p>I have my B.S. and M.S. in computer engineering from the University of Michigan.</p>
           {/*<a>view resume</a>*/}
         </div>

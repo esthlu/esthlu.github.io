@@ -1,3 +1,5 @@
+#experience .h1-container .underline { background-color: var(--cream); }
+
 .exp-item {
   display: flex;
 }
@@ -25,7 +27,7 @@
 
 .exp-item .timeline .circle:focus {
   outline: none;
-  border: 2px solid #003399;
+  border: 2px solid var(--blue);
 }
 
 .exp-item .timeline .circle .plus {
@@ -45,7 +47,7 @@
   top: -0.5rem;
   transform: translate(0, 2.5rem);
   margin: auto;
-  background-color: #CCCCCC;
+  background-color: var(--gray);
   width: 0.1rem;
   height: calc(100% - 1rem);
   z-index: -1;

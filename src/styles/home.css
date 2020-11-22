@@ -2,11 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: #CCCCCC;
-  padding: 5rem;
+  background-color: var(--gray);
   box-sizing: border-box;
 }
 
@@ -18,7 +17,7 @@
   width: 100vw;
 }
 
-.name-container {
+#home .h1-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -27,26 +26,25 @@
   overflow: hidden;
 }
 
-.name-container h1 {
+#home .h1-container h1 {
   z-index: 1;
   letter-spacing: 2px;
   font-weight: 500;
 }
 
-.underline {
+#home .h1-container .underline {
   position: absolute;
   bottom: 3rem;
+  left: 0;
   width: 100%;
-  height: 0.5rem;
-  background-color: #F7DFC1;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  background-color: var(--cream);
 }
 
 .profile-picture {
   height: 12rem;
   width: 12rem;
   object-fit: cover;
-  border: 8px solid #99CCCC;
+  border: 8px solid var(--teal);
   border-radius: 50%;
   margin-bottom: 2rem;
   animation: 1s ease-in-out 0s 1 fadeIn;
@@ -58,15 +56,19 @@
   animation: 1s ease-in-out 0s 1 fadeIn;
 }
 
-.links a {
-  display: block;
-  font-family: 'Alice', serif;
-  font-size: 1.25rem;
-  text-align: center;
-  background-color: #99CCCC;
-  padding: 0.8rem 0;
+.links .home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--teal);
   margin: 1rem 2rem;
   width: 12rem;
+  height: 3rem;
+}
+
+.links a {
+  font-family: 'Alice', serif;
+  font-size: 1.25rem;
   color: black;
   text-decoration: none;
 }
@@ -83,16 +85,16 @@
 
 @media only screen and (max-width: 768px) {
   #home {
-    padding: 3rem;
+    justify-content: center;
   }
+
   .links {
     flex-direction: column;
     overflow: auto;
   }
 
-  .links a {
+  .links .home-link {
     font-size: 1rem;
-    padding: 0.5rem 0;
     margin: 0.5rem 2rem;
     border-radius: 4px;
   }
