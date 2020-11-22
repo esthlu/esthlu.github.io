@@ -56,9 +56,20 @@ nav {
   margin: 1rem 0 3rem;
 }
 
-img.logo-home {
+svg.logo-home {
   width: 4rem;
   height: auto;
+
+}
+
+svg.logo-home .logo-path {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  transition: stroke-dashoffset 3s ease-in-out;
+}
+
+svg.logo-home .logo-path.show {
+  stroke-dashoffset: 0;
 }
 
 #about, #portfolio, #experience {

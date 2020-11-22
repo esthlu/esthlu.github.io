@@ -43,7 +43,7 @@ function ExperienceItem(props) {
           <ul className="details">
             {item.description.map((point, i) => {
               return (
-                <li>{point}</li>
+                <li key={i}>{point}</li>
               )
             })}
           </ul>
